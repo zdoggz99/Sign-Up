@@ -43,6 +43,8 @@ body {
 }
 
 .inputBox input {
+  color: white;
+  background: rgba(17, 17, 17, 0.897);
   font-size: large;
   text-align: center;
   height: 45px;
