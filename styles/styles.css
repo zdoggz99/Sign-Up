@@ -1,0 +1,99 @@
+:root {
+  font-family: Tahoma, sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  width: 100%;
+  padding: 10px;
+  background: rgba(17, 17, 17, 0.897);
+  color: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  gap: 20px;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.userDetails {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: large;
+  gap: 40px;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: calc((100% / 2) - 20px);
+}
+
+.inputBox input {
+  font-size: large;
+  text-align: center;
+  height: 45px;
+  width: 100%;
+  border-width: 3px;
+}
+
+.inputBox input:focus {
+  outline: none !important;
+  border-image: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59) 1;
+}
+
+.inputBox input:valid {
+  border-image: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59) 1;
+}
+
+.inputBox input:invalid {
+  border-image: linear-gradient(135deg, #c31432, #240b36) 1;
+}
+
+.submitButton {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  display: block;
+}
+
+.submitButton input {
+  width: inherit;
+  height: 45px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+}
+
+@media (max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+  .inputBox {
+    margin-bottom: 15px;
+    width: 95%;
+  }
+  .userDetails {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .userDetails::-webkit-scrollbar {
+    width: 0px;
+  }
+}
